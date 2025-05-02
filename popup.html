@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/popup.css" />
+    <script src="popup.js" defer></script>
+    <title>QuickSummary</title>
+  </head>
+  <body>
+    <h2 class="heading">AI Summary</h2>
+    <div class="container">
+      <select name="details" id="summary-type">
+        <option value="brife" selected="selected">Brife</option>
+        <option value="detailed">Detailed</option>
+        <option value="bullets" >Bullet Points</option>
+      </select>
+
+      <button id="btn">Summarize</button>
+      <button id="copy-btn">Copy Summary</button>
+    </div>
+
+    <pre id="response"><span id="defaultText">Select summary type and generate summary...</span></pre>
+
+
+    <!-- <pre id="response">
+        <div class="loading">
+            <div class="loader"></div>
+        </div>
+    </pre> -->
+
+  </body>
+</html>

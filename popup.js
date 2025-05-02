@@ -47,12 +47,12 @@ async function getAiSummary(rawData, summaryType, geminiApiKey) {
     const pageContent = rawData.length > max ? rawData.slice(0, max) + "..." : rawData;
 
     const promptType = {
-        brife: `Summarize in 2 to 3 sentences \n\n ${pageContent}`,
+        brief: `Summarize in 2 to 3 sentences \n\n ${pageContent}`,
         detailed: `Generate a detailed summary with all the importent topics \n\n ${pageContent}`,
         bullets: `Summarize in 6-7 Bullet points of important notes (start each line with "-> ") \n\n ${pageContent}`
     }
 
-    const prompt = promptType[summaryType] || promptType["brife"];
+    const prompt = promptType[summaryType] || promptType["brief"];
     const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${geminiApiKey}`
 
     const res = await fetch(url,
